@@ -124,10 +124,16 @@ class Stack:
         return self
 
 
-# добавление нового объекта класса StackObj в конец односвязного списка st
-st = st + obj
-st += obj
-
-# добавление нескольких объектов в конец односвязного списка
-st = st * ['data_1', 'data_2', ..., 'data_N']
-st *= ['data_1', 'data_2', ..., 'data_N']
+h = StackObj('5')
+print(h.data)  # 5
+st = Stack()
+st.push_back(StackObj('1'))
+st.push_back(StackObj('2'))
+st.push_back(StackObj('3'))
+st.show()  # 1 2 3
+st = st + StackObj('4')
+st += StackObj('5')
+st.show()  # 1 2 3 4 5
+st = st * [str(i) for i in range(6, 9)]
+st *= [str(i) for i in range(9, 12)]
+st.show()  # 1 2 3 4 5 6 7 8 9 10 11
